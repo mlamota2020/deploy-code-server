@@ -1,7 +1,14 @@
 {
-  "workbench.colorTheme": "Default Dark+",
+  "workbench.colorTheme": "Halcyon",
   "git.postCommitCommand": "sync",
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
-  "git.autofetch": true
+  "git.autofetch": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontFamily": "JetBrains Mono, Consolas, 'Courier New', monospace",
+  "editor.fontSize": 13,
+  "editor.wordWrap": "on",
+  "editor.fontLigatures": true,
+  "editor.fontWeight": 300,
+  "editor.lineHeight": 22
 }
