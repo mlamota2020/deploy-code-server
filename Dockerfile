@@ -14,6 +14,10 @@ COPY deploy-container/rclone-tasks.json /tmp/rclone-tasks.json
 
 ENV PORT=8080
 
+COPY deploy-container/entrypoint.sh /usr/bin/deploy-container-entrypoint.sh
+
+ENTRYPOINT ["/usr/bin/deploy-container-entrypoint.sh"]
+
 RUN code-server --install-extension esbenp.prettier-vscode
 
 RUN code-server --install-extension brittanychiang.halcyon-vscode
@@ -25,7 +29,3 @@ RUN code-server --install-extension eamodio.gitlens
 RUN code-server --install-extension bradlc.vscode-tailwindcss
 
 RUN code-server --install-extension formulahendry.auto-rename-tag
-
-COPY deploy-container/entrypoint.sh /usr/bin/deploy-container-entrypoint.sh
-
-ENTRYPOINT ["/usr/bin/deploy-container-entrypoint.sh"]
